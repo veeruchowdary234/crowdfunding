@@ -17,9 +17,13 @@ const userschema=mongoose.Schema({
    },
     photo:{
      type:String,
-     default:"https://www.kindpng.com/picc/m/78-785827_user-profile-avatar-login-account",
+     default:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png",
      required:true,
     },
+    isAdmin:{
+        type:Boolean,
+        default:false
+    }
 },{timeStamps:true});
 
 const User=mongoose.model("userd",userschema)

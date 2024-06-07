@@ -39,7 +39,7 @@ export const signin=async (req,res,next)=>
          {
           return next(errorHandler(400, 'Invalid password'));
          }
-         const token=jwt.sign({id:validuser._id},"abc123");
+         const token=jwt.sign({id:validuser._id,isAdmin:validuser.isAdmin},"abc123");
          return res.status(200).cookie('token',token,{ 
           httpOnly:true,
          }).json(validuser)   
@@ -54,7 +54,7 @@ export const google=async (req,res,next)=>{
     const user=await User.findOne({email})
     if(user)
     {
-      const token=jwt.sign({id:user._id},"abc123");
+      const token=jwt.sign({id:user._id,isAdmin:user.isAdmin},"abc123");
       return res.status(200).cookie('token',token,{ 
         httpOnly:true,
        }).json(user) 
@@ -75,3 +75,4 @@ export const google=async (req,res,next)=>{
     next(error)
   }
 }
+

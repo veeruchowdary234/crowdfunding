@@ -1,0 +1,51 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_paymentId",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_amount",
+				"type": "string"
+			}
+		],
+		"name": "contribute",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "getContributions",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "paymentId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "amount",
+						"type": "string"
+					}
+				],
+				"internalType": "struct ContributeContract.Record[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

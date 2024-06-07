@@ -1,0 +1,10 @@
+import express from 'express';
+import { verifyuser } from '../utils/verifyuser.js';
+import { createpost,getposts,deletepost,updatepost,approvepost} from '../controllers/createpostcontroller.js';
+const Router=express.Router();
+Router.post('/createpost',verifyuser,createpost);
+Router.get('/getposts',getposts);
+Router.delete('/deletepost/:postId/:userId',verifyuser,deletepost);
+Router.put('/updatepost/:postId/:userId',verifyuser,updatepost);
+Router.put('/approvepost/:postId',verifyuser,approvepost);
+export default Router;

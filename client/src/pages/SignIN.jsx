@@ -31,6 +31,7 @@ function Signin()
         body:JSON.stringify(formdata)
       })
       const data=await res.json();
+      console.log(data)
       if(data.sucess===false)
       {
         dispatch(signinFailure(data.message))
@@ -51,8 +52,8 @@ function Signin()
    <div className='flex p-3 gap-5 max-w-3xl mx-auto flex-col'>
     <div className=''>
     <Link to='/' className='  font-bold dark:text-white text-3xl'>
-        <span className=' px-2 py-1 bg-gradient-to-r from-indigo-600 via-purple-400 to-red-500 text-white'>Veeru's</span>
-         Blog
+        <span className=' px-2 py-1 bg-gradient-to-r from-indigo-600 via-purple-400 to-red-500 text-white'>Crowdfunding</span>
+         Platform
         </Link>
         <p>You can sigin with your email and password</p>
     </div>
@@ -72,7 +73,7 @@ function Signin()
       </form>
       <div className='flex gap-2 mt-5'>
         <span>Have an Account?</span>
-        <Link to='/signin' className='text-blue-500' type='submit'>Signup</Link>
+        <Link to='/signup' className='text-blue-500' type='submit'>Signup</Link>
         {
           errormessage&&(
             <Alert className='mt-5' color='failure'>{errormessage}</Alert>
