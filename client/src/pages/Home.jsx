@@ -10,7 +10,7 @@ const Home = () => {
     useEffect(() => {
       const fetchposts=async()=>
       {
-        const response = await fetch('api/post/getposts?limit=3')
+        const response = await fetch('https://crowdfunding-31jm.onrender.com/api/post/getposts?limit=3')
         const data = await response.json()
         setPosts(data.posts)
       }
