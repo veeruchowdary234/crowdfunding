@@ -16,5 +16,4 @@ async function SaveToBlockChain(paymentId, amount) {
     // console log the transaction logs
     return transaction;
 }
-
 export default SaveToBlockChain;
