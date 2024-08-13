@@ -2,10 +2,10 @@
   "name": "mern-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "./api/index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon api/index.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
