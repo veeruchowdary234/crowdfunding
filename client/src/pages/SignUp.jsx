@@ -20,7 +20,7 @@ function SignUp() {
       seterrormessage('please fill out all fields')
     }
     try {
-      const res=await fetch('/api/auth/signup',
+      const res=await fetch('https://crowdfunding-31jm.onrender.com/api/auth/signup',
       {
         method:'POST',
         headers:{'Content-Type':'application/json'},
